@@ -20,7 +20,7 @@ const Products = () => {
     console.log(products);
     return (
         (loading && <Loading />) || (<section className='container pt-[120px] px-5 pb-12 grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-5'>
-        {products.map((product) => <ProductCard key={product.id} data={product}/>)}
+        {products.map((product:any) => <ProductCard key={product.id} data={product}/>)}
     </section>
     )
         

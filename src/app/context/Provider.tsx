@@ -18,7 +18,7 @@ const Provider = ({children}:any) => {
         setIsCartVisible,
     }
   return (
-    <AppContext.Provider value={value}>
+    <AppContext.Provider value={`${value}`}>
         {children}
     </AppContext.Provider>
   )
