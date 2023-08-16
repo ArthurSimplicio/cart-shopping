@@ -3,6 +3,7 @@ import {BsCartDashFill} from 'react-icons/bs'
 import { useContext } from 'react'
 import formatCurrency from '../utils/formatCurrency'
 import AppContext from '../context/AppContext'
+import Image from 'next/image'
 
 const CartItem = ({data}:any) => {
     const {cartItems, setCartItems}:any = useContext(AppContext)
@@ -15,7 +16,7 @@ const CartItem = ({data}:any) => {
 
   return (
     <section className='cart-item relative flex items-start border-b border-solid border-[#ddd] pb-5 mb-5'>
-        <img 
+        <Image 
         src={thumbnail} 
         alt="product" 
         className='w-[70px]'/>

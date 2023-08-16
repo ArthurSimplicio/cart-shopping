@@ -2,6 +2,7 @@ import React, {useContext} from 'react';
 import {BsFillCartPlusFill} from 'react-icons/bs';
 import formatCurrency from '../utils/formatCurrency';
 import AppContext from '../context/AppContext';
+import Image from 'next/image';
 
 
 const ProductCard = ({data}:any) => {
@@ -11,8 +12,8 @@ const ProductCard = ({data}:any) => {
     const handleAddCart = () =>  setCartItems([ ...cartItems, data])
 
     return (
-        <section className=' product-cart relative m-0 m-auto w-full max-w-[300px] bg-white flex flex-col cursor-pointer hover:shadow-md'>
-            <img src={thumbnail.replace(/\w\.jpg/gi, 'W.jpg')} alt='product' className='w-full' />
+        <section className=' product-cart relative w-full max-w-[300px] bg-white flex flex-col cursor-pointer hover:shadow-md'>
+            <Image src={thumbnail.replace(/\w\.jpg/gi, 'W.jpg')} alt='product' className='w-full' />
             <div className='p-5 border-t border-solid border-[#ddd]'>
                 <h2 className='font-normal text-3xl mb-2'>{formatCurrency(price, 'BRL')}</h2>
                 <h2 className='font-medium  text-base text-gray-500 leading-6'>{title}</h2>

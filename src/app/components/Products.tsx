@@ -16,7 +16,7 @@ const Products = () => {
     
         })
         
-    },[])
+    },[setLoading, setProducts])
     console.log(products);
     return (
         (loading && <Loading />) || (<section className='container pt-[120px] px-5 pb-12 grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-5'>
